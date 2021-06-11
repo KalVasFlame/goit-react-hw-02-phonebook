@@ -22,9 +22,9 @@ class App extends React.Component {
           contacts: [contact, ...contacts]
         }))
   };
-  
+
     onDeleteContactClick = (id) => {
-      this.setState(prevState => ({
+      this.setState(prevState => ({ 
       contacts:  prevState.contacts.filter(i => 
           i.id !== id)
       }))
