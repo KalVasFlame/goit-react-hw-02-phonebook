@@ -16,21 +16,13 @@ class App extends React.Component {
     const contact = {
       id: shortid.generate(), name, number,
     };
-    let isOn = false;
-    this.state.contacts.forEach(i => {
-      if (i.name === name) {
-        isOn = true;
-      }
-    })
-      if (!isOn) {
-        this.setState(({ contacts }) => ({
+    this.state.contacts.some(i => 
+    i.name === name
+    ) ? alert(`${name} is already in contacts`) : this.setState(({ contacts }) => ({
           contacts: [contact, ...contacts]
         }))
-      } else {
-        alert(`${name} is already in contacts`)
-      }
-  
   };
+  
     onDeleteContactClick = (id) => {
       this.setState(prevState => ({
       contacts:  prevState.contacts.filter(i => 
