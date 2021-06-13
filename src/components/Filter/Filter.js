@@ -1,10 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types'; 
+import React from "react"
+import PropTypes from "prop-types"
 
-const Filter = ({value, onFilter}) => {
-  return (
-    <input type="text" value={value} onChange={ onFilter}/>
-  )
+const Filter = ({ value, onFilter }) => {
+  return <input type="text" value={value} placeholder="Filter" onChange={onFilter} />
 }
 
 Filter.propTypes = {
